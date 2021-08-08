@@ -3,9 +3,11 @@
 
 import dayjs from 'dayjs'
 import DefaultLayout from '~/layouts/Default.vue'
+import ArtLayout from '~/layouts/art/default.vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import '@fortawesome/fontawesome-free/css/all.css'
 import './assets/css/index.css'
+import './assets/css/art/index.css'
 
 
 export default function (Vue, { router, head, isClient }) {
@@ -21,4 +23,5 @@ export default function (Vue, { router, head, isClient }) {
   })
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
+  Vue.component('ArtLayout', ArtLayout)
 }

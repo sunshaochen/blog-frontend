@@ -5,6 +5,10 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 module.exports = {
   siteName: 'Gridsome',
+  icon: {
+    favicon: './static/logo.svg',
+    touchicon: './static/log.svg'
+  },
   plugins: [
     {
       use: '@gridsome/source-filesystem',
@@ -17,9 +21,9 @@ module.exports = {
       options: {
         apiURL: process.env.GRIDSOME_API_URL,
         queryLimit: 1000, // Defaults to 100
-        contentTypes: ['post', 'tag'],
+        contentTypes: ['post', 'tag', 'art-project', 'art-journal'],
         // typeName: 'Strapi',
-        singleTypes: ['general'],
+        singleTypes: ['general', 'art-general'],
         // Possibility to login with a Strapi user,
         // when content types are not publicly available (optional).
         loginData: {
