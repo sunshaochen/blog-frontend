@@ -9,7 +9,7 @@
         <div class="a-project" v-for="project in $page.projects.edges" :key="project.node.id">
           <g-link class="a-project-link" to="/">
             <img
-              :src="GRIDSOME_API_URL + project.node.cover.url"
+              :src="project.node.cover.url"
               :alt="project.node.title"
               width="2560"
               class="a-thumbnail"
